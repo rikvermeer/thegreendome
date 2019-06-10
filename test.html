@@ -8,7 +8,7 @@ function readWriteNfc() {
         consoleLog2(message);
         if (message.data[0].recordType === 'empty') {
           navigator.nfc.push([{
-            url: message.url,
+            url: 'https://rikvermeer.github.io/thegreendome',
             data: [{
               recordType: "text",
               data: 'Hello World'
