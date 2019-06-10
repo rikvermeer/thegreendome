@@ -4,6 +4,7 @@ function readWriteNfc() {
   if ('nfc' in navigator) {
     navigator.nfc.watch(function (message) {
         consoleLog("NFC message received from URL " + message.url);
+        consoleLog2("Got message");
         consoleLog2(message);
         if (message.data[0].recordType === 'empty') {
           navigator.nfc.push([{
